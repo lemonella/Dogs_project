@@ -8,7 +8,7 @@ import math
 lat_point = input("Введите широту: ")
 lng_point = input("Введите долготу: ")
 # lat_point = 37.230884
-#lng_point = 56.036111
+# lng_point = 56.036111
 
 try:
     lat_point = float(lat_point)
@@ -31,8 +31,7 @@ def find_distance_by_coordintes (lat1,lng1,lat2,lng2):
     delta_lat = (lat2 - lat1)
     delta_lng = (lng2 - lng1)
  
-   # return round(6378137 * acos(cos(lat1) * cos(lat2) * cos(lng1 - lng2) + sin(lat1) * sin(lat2)))
-    return round(6378137 * math.acos(math.cos( lat1 ) * math.cos( lat2 ) * math.cos(lng2 - lng1) + math.sin(lat1) * math.sin(lat2)))
+    return round(6378137 * math.acos(math.cos(lat1) * math.cos(lat2) * math.cos(lng2 - lng1) + math.sin(lat1) * math.sin(lat2)))
 
 # Read the file with cafes info
 cafes = {}
