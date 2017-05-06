@@ -2,9 +2,9 @@ import datetime
 from db_classes import db_session, Place
 
 if __name__ == '__main__':
-    cafes = Place
-
-    print(cafes.query.all())
+    cafes_raw = Place.query.all()
+    for cafe in cafes_raw:
+        print(cafe.test())
 
 '''
 def get_cafes_from_db (csv_filepath, db_class, do_commit=False, fields=[]):
