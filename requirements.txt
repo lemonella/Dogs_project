@@ -1,3 +1,4 @@
 Flask
 flask-security 
 flask-sqlalchemy
+sqlalchemy
