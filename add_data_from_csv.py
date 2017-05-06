@@ -1,6 +1,6 @@
 import csv
 import datetime
-from db_classes import db_session, Place, User, Book
+from db_classes import db_session, Place
 
 
 def load_data_from_csv(csv_filepath, db_class, do_commit=False, fields=[]):
@@ -11,7 +11,7 @@ def load_data_from_csv(csv_filepath, db_class, do_commit=False, fields=[]):
     if do_commit:
         db_session.commit()
 
-
+'''
 def load_users_from_csv(csv_filepath, do_commit=False):
     load_data_from_csv(
         csv_filepath=csv_filepath,
@@ -30,7 +30,7 @@ def load_places_from_csv(csv_filepath, do_commit=False):
     )
 
 def load_books_from_csv(csv_filepath, do_commit=False):
-    with open('booklist.csv', 'r', encoding='utf-8') as f:
+    with open(csv_filepath, 'r', encoding='utf-8') as f:
         fields = ['booked_at', 'user_id', 'place_id']
         reader = csv.DictReader(f, fields, delimiter=',')
         for row in reader:
@@ -43,10 +43,10 @@ def load_books_from_csv(csv_filepath, do_commit=False):
 
 
 def load_data_from_all_csv():
-    load_users_from_csv(csv_filepath='userlist.csv', do_commit=True)
-    load_places_from_csv(csv_filepath='placelist.csv', do_commit=True)
-    load_books_from_csv(csv_filepath='booklist.csv', do_commit=True)
-
+    load_users_from_csv('userlist.csv', do_commit=True)
+    load_places_from_csv('placelist.csv', do_commit=True)
+    load_books_from_csv('booklist.csv', do_commit=True)
+'''
 
 if __name__ == '__main__':
-    load_data_from_all_csv()
+    load_data_from_csv('placelist.csv', Place, True, ['name', 'address', 'latitude', 'longitude', 'description'])
