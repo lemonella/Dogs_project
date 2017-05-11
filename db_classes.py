@@ -23,6 +23,10 @@ class Place(Base):
     def __repr__(self):
         return '<Место: {} {}>'.format(self.name, self.address)
 
+'''
+------
+Элины классы для юзеров и инфо о бронировании кафе
+------
 
 class User(Base):
     __tablename__ = 'users'
@@ -47,6 +51,7 @@ class Book(Base):
 
     def __repr__(self):
         return '<Брони: {} {} {}>'.format(self.user, self.place, self.date)
+'''
 
 if __name__ == "__main__":
     Base.metadata.create_all(bind=engine)
