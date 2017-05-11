@@ -1,6 +1,4 @@
 Flask
-<<<<<<< HEAD
-=======
 flask-security 
 flask-sqlalchemy
->>>>>>> 8c1038c9220b9b8b992be50171ae2b7e635c526b
+sqlalchemy
