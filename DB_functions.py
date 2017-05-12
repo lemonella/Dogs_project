@@ -1,10 +1,15 @@
 import datetime
 from db_classes import db_session, Place
 
-if __name__ == '__main__':
+def get_all_cafes_from_db():
     cafes_raw = Place.query.all()
+    return cafes_raw
+
+
+if __name__ == '__main__':
+    cafes_raw = get_all_cafes_from_db()
     for cafe in cafes_raw:
-        print(cafe.test())
+        print(cafe.name)
 
 '''
 def get_cafes_from_db (csv_filepath, db_class, do_commit=False, fields=[]):
