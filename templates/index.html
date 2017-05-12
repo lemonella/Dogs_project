@@ -3,13 +3,16 @@
 <html>
 <head>
 	<title>Собаки с тобой!</title>
+	<style type="text/css">
+	@import url("static/css/css.css")
+	</style>
 </head>
 <body>
     <center>
         <form method="POST" action="/map">
-			<p><input type="input" placeholder="Введите широту" name="ltd">
+			<p><input type="text" placeholder="Введите широту" name="ltd">
 			</p>
-			<p><input type="input" placeholder="Введите долготу" name="lng">
+			<p><input type="text" placeholder="Введите долготу" name="lng">
 			</p>
 			<input type="submit" value="Найти кафе!">
     	</form>
